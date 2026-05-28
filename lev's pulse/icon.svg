@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#f6f7fb"/>
+      <stop offset="60%" stop-color="#e9ecf3"/>
+      <stop offset="100%" stop-color="#dfe3ec"/>
+    </radialGradient>
+    <radialGradient id="orb" cx="38%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="38%" stop-color="#e8efff" stop-opacity="0.75"/>
+      <stop offset="72%" stop-color="#c8d4ec" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#9aaccf" stop-opacity="0.35"/>
+    </radialGradient>
+    <radialGradient id="orbCore" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#7e94c0" stop-opacity="0.15"/>
+    </radialGradient>
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ring" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#a6b6d8" stop-opacity="0"/>
+      <stop offset="95%" stop-color="#a6b6d8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a6b6d8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+  <!-- background squircle -->
+  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="url(#bg)"/>
+  <!-- outer glow -->
+  <circle cx="256" cy="270" r="180" fill="#aab9da" opacity="0.18" filter="url(#softShadow)"/>
+  <!-- pulse ring -->
+  <circle cx="256" cy="256" r="178" fill="url(#ring)"/>
+  <!-- main orb -->
+  <circle cx="256" cy="256" r="156" fill="url(#orb)"/>
+  <circle cx="256" cy="256" r="156" fill="url(#orbCore)"/>
+  <!-- inner thin ring -->
+  <circle cx="256" cy="256" r="156" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.2"/>
+  <!-- top highlight crescent -->
+  <ellipse cx="232" cy="186" rx="88" ry="36" fill="url(#highlight)" opacity="0.85"/>
+  <!-- tiny specular dot -->
+  <circle cx="208" cy="190" r="10" fill="#ffffff" opacity="0.9"/>
+  <circle cx="208" cy="190" r="3.2" fill="#ffffff"/>
+  <!-- bottom soft reflection -->
+  <ellipse cx="256" cy="370" rx="80" ry="10" fill="#ffffff" opacity="0.18"/>
+</svg>
